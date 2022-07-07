@@ -1,0 +1,19 @@
+# Load oh-my-zsh
+antigen use oh-my-zsh
+
+# Bundles
+antigen bundle git
+antigen bundle heroku
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle yarn
+antigen bundle command-not-found
+
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Theme
+antigen theme candy
+
+antigen apply
