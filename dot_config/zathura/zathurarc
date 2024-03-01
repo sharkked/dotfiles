@@ -1,0 +1,43 @@
+set font "Source Code Pro 10"
+
+set selection-clipboard clipboard
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+
+set recolor true
+
+# keybinds
+
+unmap q
+map Q quit
+
+map D set "first-page-column 1:1"
+map r reload
+map R rotate
+
+map [ zoom out
+map ] zoom in
+map I recolor
+
+# colors
+
+
+set render-loading true
+
+set index-bg "#141414"
+set index-fg "#feffd3"
+set index-active-bg "#262626"
+set index-active-fg "#feffd3"
+
+set inputbar-bg "#141414"
+set inputbar-fg "#feffd3"
+
+set statusbar-bg "#141414"
+set statusbar-fg "#feffd3"
+
+set default-bg "#141414"
+set default-fg "#feffd3"
+
+set recolor-lightcolor	"#141414"
+set recolor-darkcolor 	"#feffd3"

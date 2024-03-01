@@ -1,0 +1,8 @@
+configuration {
+  display-drun: "❯ ";
+  drun-display-format: "{name}";
+
+  font:   "Source Code Pro 10";
+}
+
+@theme "noct"

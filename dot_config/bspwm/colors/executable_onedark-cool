@@ -1,0 +1,3 @@
+#! /bin/sh
+bspc config focused_border_color	'#a5b0c5'
+bspc config normal_border_color		'#546178'

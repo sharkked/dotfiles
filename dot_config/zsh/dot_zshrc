@@ -1,0 +1,61 @@
+export EDITOR=vim
+
+# use emacs keymaps
+bindkey -e
+
+# https://github.com/nvm-sh/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# https://github.com/jandamm/zgenom
+source "$ZDOTDIR/zgenom/zgenom.zsh"
+
+HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt sharehistory
+setopt appendhistory
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+autoload -Uz compinit; compinit -d "$ZDOTDIR/.zcompdump-$HOST"
+
+zgenom autoupdate
+
+if ! zgenom saved; then
+	echo "Creating zgenom save"
+	zgenom ohmyzsh plugins/git
+	zgenom ohmyzsh plugins/yarn
+	zgenom load zsh-users/zsh-syntax-highlighting
+	zgenom save
+	zgenom compile "$ZDOTDIR/.zshrc"
+fi
+
+# https://github.com/sindresorhus/pure
+fpath+=($ZDOTDIR/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
+# aliases
+alias zc="vim $ZDOTDIR/.zshrc"
+alias zs="source $ZDOTDIR/.zshrc"
+
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls="ls --color=auto"
+	alias dir="dir --color=auto"
+	alias vdir="vdir --color=auto"
+	alias grep="grep --color=auto"
+	alias fgrep="fgrep --color=auto"
+	alias egrep="egrep --color=auto"
+fi
+
+alias yolo="lmao"
+alias lmao='git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'
+alias open="xdg-open"
+alias data="ssh -t chalmers@data"
+
+alias ydlx="yarn dlx"
+
+alias xivkill="wineserver -k;pkill 'start.exe|ffxiv_dx11.exe|Dalamud|XIVLauncher'"
+

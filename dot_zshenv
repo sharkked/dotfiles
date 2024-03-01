@@ -1,0 +1,5 @@
+ZDOTDIR="$HOME/.config/zsh"
+EDITOR=$(which vim)
+ADW_DEBUG_COLOR_SCHEME=prefer-dark
+
+. "$HOME/.cargo/env"

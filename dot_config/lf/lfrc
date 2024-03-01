@@ -1,0 +1,15 @@
+set ifs "\n"
+
+# previews
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+
+# keybinds
+map <enter> shell
+map ` !true
+map . set hidden!
+
+map <delete> trash
+
+map x $$f
+map X !$f

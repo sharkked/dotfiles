@@ -1,0 +1,19 @@
+[colors]
+transparent = #0fff
+
+foreground = #feffd3
+background = #f7141414
+border = #303133
+
+inactive =  #262626
+
+black =     #141414
+red =       #c06c43
+green =     #afb979
+yellow =    #c2a86c
+blue =      #444649
+magenta =   #5a5d61
+cyan =      #778284
+white =     #feffd3
+
+; vim:ft=dosini

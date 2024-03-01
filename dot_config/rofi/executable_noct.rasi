@@ -1,0 +1,76 @@
+@import "colors/twilight.rasi"
+
+* {
+  text-color: @c-fg0;
+  background-color: transparent;
+  vertical-align: 0.5;
+}
+
+window {
+  location:   center;
+  width:      480;
+  background-color:   @c-bg0;
+  border: 1px;
+  border-color:       @c-accent;
+}
+
+inputbar {
+  spacing:    8px; 
+  padding:    8px;
+}
+
+prompt {
+  enabled: true;
+  text-color: @c-accent;
+}
+
+entry {
+  text-color: @c-fg0;
+  placeholder: "";
+}
+
+listview {
+  lines:      8;
+  columns:    1;
+  cycle:      false;
+  fixed-height:   false;
+}
+
+element {
+  text-transform: lowercase;
+  padding:    8px;
+  spacing:    8px;
+}
+
+element normal normal, element alternate normal {
+  background-color: transparent;
+  text-color: @c-fg0;
+}
+
+element normal urgent {
+  text-color: @c-urgent;
+}
+
+element normal active {
+  text-color: @c-accent;
+}
+
+element selected {
+  text-color: @c-bg0;
+}
+
+element selected normal, element selected active {
+  background-color:   @c-accent;
+}
+
+element selected urgent {
+  background-color:   @c-urgent;
+}
+
+element-icon {
+  size:   0.8em;
+}
+
+element-text {
+  text-color: inherit;
+}

@@ -1,0 +1,30 @@
+* {
+  background: #141414;
+  foreground: #feffd3;
+
+  black:   #141414;
+  red:     #c06c43;
+  green:   #afb979;
+  yellow:  #c2a86c;
+  blue:    #444649;
+  magenta: #b4be7b;
+  cyan:    #778284;
+  white:   #feffd3;
+
+  bright-black:   #262626;
+  bright-red:     #dd7c4c;
+  bright-green:   #cbd88c;
+  bright-yellow:  #e1c47d;
+  bright-blue:    #5a5d61;
+  bright-magenta: #d0db8e;
+  bright-cyan:    #8a989a;
+  bright-white:   #feffd3;
+
+  c-bg0: @background;
+  c-bg1: @blue;
+  c-fg0: @foreground;
+
+  c-accent: @green;
+  c-urgent: @red;
+}
+
