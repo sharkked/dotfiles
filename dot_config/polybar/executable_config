@@ -21,9 +21,11 @@ include-file = $HOME/.config/polybar/colors/twilight
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 margin = 8
-width = 100%
+width = 1888
 height = 32
 fixed-center = true
+offset-x = 16
+offset-y = 16
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -31,11 +33,12 @@ foreground = ${colors.foreground}
 line-size = 1
 line-color = ${colors.red}
 
+radius = 10
 padding-left = 0
 padding-right = 1
 
-border-bottom-size = 1
-border-bottom-color = ${colors.border}
+border-size = 1
+border-color = ${colors.border}
 module-margin-left = 1
 module-margin-right = 1
 
@@ -48,9 +51,7 @@ font-5 = M+1CodeNerdFont:pixelsize=12;3
 
 modules-left = bspwm xwindow 
 modules-center = spotify previous playpause next
-modules-right = xkeyboard updates updates_ipc pulseaudio date
-
-tray-position = right
+modules-right = xkeyboard updates updates_ipc pulseaudio date tray
 
 enable-ipc = true
 
@@ -59,6 +60,11 @@ override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/tray]
+type = internal/tray
+tray-spacing = 8px
+tray-size = 16px
 
 [module/battery]
 type = internal/battery

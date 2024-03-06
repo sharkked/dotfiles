@@ -11,7 +11,7 @@ window {
   width:      480;
   background-color:   @c-bg0;
   border: 1px;
-  border-radius: 10px;
+  border-radius: 8px;
   border-color:       @c-accent;
 }
 

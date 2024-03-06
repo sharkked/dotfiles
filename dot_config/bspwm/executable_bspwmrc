@@ -12,9 +12,10 @@ $BSPWM/theme.sh
 $BSPWM/colors/twilight
 
 # Launch
-#$BSPWM/scripts/configuremonitors.sh
-$BSPWM/scripts/resetpolybar.sh
+#$BSPWM/scripts/configure-monitors.sh
+$BSPWM/scripts/reset-polybar.sh
 $BSPWM/scripts/wallpaper.sh
+$BSPWM/scripts/picom-ignore-monocle.sh
 
 # Fix java windows
 wmname LG3D
