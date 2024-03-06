@@ -2,7 +2,7 @@
 transparent = #0fff
 
 foreground = #feffd3
-background = #f7141414
+background = #cc141414
 border = #303133
 
 inactive =  #262626
