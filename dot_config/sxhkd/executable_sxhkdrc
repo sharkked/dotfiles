@@ -48,7 +48,7 @@ shift + Print
 
 # scratchpad
 super + u
-    $HOME/.config/bspwm/scratchpad.sh scratchpad
+    $HOME/.config/sxhkd/scripts/scratchpad.sh scratchpad
 
 # Discord reacts
 super + shift + a

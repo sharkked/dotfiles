@@ -4,86 +4,19 @@ BSPWM="$HOME/.config/bspwm"
 
 pgrep -x sxhkd >/dev/null || sxhkd &
 
-#bspc monitor HDMI-0 -d      
 bspc monitor HDMI-0 -d 1 2 3 4 5 6
 #bspc monitor DP-0 -d 0
-
-PADDING=12
-export PADDING
-
-bspc config border_width 1
-
-# gaps
-bspc config window_gap 12
-
-# padding
-bspc config left_padding 12
-bspc config right_padding 12
-bspc config top_padding 12
-bspc config bottom_padding 12
-
-# monocle fix
-bspc config gapless_monocle true
-bspc config borderless_monocle true
-bspc config paddingless_monocle true
-
-bspc config left_monocle_padding -12
-bspc config right_monocle_padding -12
-bspc config top_monocle_padding -12
-bspc config bottom_monocle_padding -12
-
-bspc config -m HDMI-0 top_padding 44
 
 # Colors
 $BSPWM/colors/twilight
 
-# Mail
-bspc rule -a "Instant messaging status" state=floating
+# Launch
+#$BSPWM/configuremonitors.sh
+$BSPWM/scripts/resetpolybar.sh
+$BSPWM/scripts/wallpaper.sh
 
-# Art
-bspc rule -a Gimp state=floating follow=on
-
-# Steam
-bspc rule -a '*:Steam:Friends List' state=floating
-bspc rule -a 'steam:*:Friends List' state=floating
-bspc rule -a 'Steam:*:Steam News' state=floating
-
-# Godot
-bspc rule -a Godot state=floating
-bspc rule -a Godot_ProjectList state=floating
-bspc rule -a stream-layout state=floating
-bspc rule -a 'penguins but awesome' state=floating
-
-# Coding
-bspc rule -a jetbrains-idea-ce
-
-# Games
-bspc rule -a 'Slippi Launcher' state=floating center=true
-bspc rule -a 'XIVLauncher.Core' state=floating center=true
-bspc rule -a ffxiv_dx11.exe state=floating center=true
-
-# Misc
-bspc rule -a Pavucontrol sticky=on state=floating
-bspc rule -a easyeffects sticky=on state=floating
-bspc rule -a 1Password sticky=on state=floating center=true
-bspc rule -a mpv state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-bspc rule -a Zathura state=tiled
-bspc rule -a uxplay state=floating
-bspc rule -a '*:uxplay' state=floating
-bspc rule -a Peek state=floating
-bspc rule -a scratchpad sticky=on state=floating
-bspc rule -a '*:Print' state=float
-bspc rule -a '*:scratchpad' sticky=on state=floating
-bspc rule -a flameshot state=floating
-bspc rule -a 'JetBrains Toolbox' sticky=on #TODO
-
-# Autorun programs
-$BSPWM/autorun.sh &
-
-# Configure monitors
-#$BSPWM/monitors.sh &
+$BSPWM/rules.sh
+$BSPWM/theme.sh
 
 # Fix java windows
 wmname LG3D

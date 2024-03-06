@@ -20,8 +20,9 @@ include-file = $HOME/.config/polybar/colors/twilight
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
+margin = 8
 width = 100%
-height = 31
+height = 32
 fixed-center = true
 
 background = ${colors.background}
