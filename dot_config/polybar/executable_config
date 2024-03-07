@@ -21,10 +21,10 @@ include-file = $HOME/.config/polybar/colors/twilight
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 margin = 8
-width = 1888
+width = 1890
 height = 32
 fixed-center = true
-offset-x = 16
+offset-x = 15
 offset-y = 16
 
 background = ${colors.background}
@@ -33,9 +33,10 @@ foreground = ${colors.foreground}
 line-size = 1
 line-color = ${colors.red}
 
-radius = 10
 padding-left = 0
 padding-right = 1
+
+radius = 8px
 
 border-size = 1
 border-color = ${colors.border}
