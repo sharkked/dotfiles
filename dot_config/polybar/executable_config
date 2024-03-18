@@ -21,10 +21,10 @@ include-file = $HOME/.config/polybar/colors/twilight
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 margin = 8
-width = 1890
+width = 1888
 height = 32
 fixed-center = true
-offset-x = 15
+offset-x = 16
 offset-y = 16
 
 background = ${colors.background}
@@ -44,15 +44,16 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Source Code Pro:pixelsize=12;3
-font-1 = Font Awesome 6 Pro Solid:pixelsize=12;3
-font-2 = Font Awesome 6 Pro Solid:pixelsize=10;3
+font-1 = Font Awesome 6 Pro Solid:pixelsize=10;3
+font-2 = Font Awesome 6 Pro Solid:pixelsize=10;2
 font-3 = Font Awesome 6 Brands:pixelsize=12;3
-font-4 = SauceCodePro Nerd Font:pixelsize=16;4
+font-4 = SauceCodePro Nerd Font:pixelsize=12;3
 font-5 = M+1CodeNerdFont:pixelsize=12;3
+font-6 = Symbola:pixelsize=16;5:spacing=-50
 
 modules-left = bspwm xwindow 
 modules-center = spotify previous playpause next
-modules-right = xkeyboard updates updates_ipc pulseaudio date tray
+modules-right = xkeyboard weather weather_ipc updates updates_ipc pulseaudio date tray
 
 enable-ipc = true
 
@@ -104,11 +105,11 @@ animation-charging-framerate = 750
 [module/bspwm]
 type = internal/bspwm
 
-ws-icon-0 = 1;%{O-4}
+ws-icon-0 = 1;
 ;ws-icon-default = %{T3}%{O-6}%{T-}
-ws-icon-default = %{O-6}
+ws-icon-default = 
 
-format = <label-state>
+format = <label-state>%{O-10}
 
 label-focused = %icon%
 label-focused-foreground = ${colors.green}
@@ -125,7 +126,7 @@ label-empty = %icon%
 label-empty-foreground = ${colors.inactive}
 label-empty-padding = 1
 
-label-separator = 
+label-separator = %{O-10}
 
 [module/date]
 type = internal/date
@@ -237,13 +238,13 @@ interval = 2
 format-volume = <ramp-volume>%{O6}<label-volume>
 label-volume = %percentage:2%%
 ramp-volume-0 = 
-ramp-volume-0-padding-right = 10px 
+ramp-volume-0-padding-right = 8px 
 ramp-volume-0-weight = 1
 ramp-volume-1 = 
-ramp-volume-1-padding-right = 6px 
+ramp-volume-1-padding-right = 4px 
 ramp-volume-1-weight = 32
 ramp-volume-2 = %{O-1}
-ramp-volume-2-padding-right = 3px
+ramp-volume-2-padding-right = 1px
 ramp-volume-2-weight = 33
 ramp-volume-3 = 
 ramp-volume-3-weight = 33
@@ -253,6 +254,23 @@ label-muted-foreground = ${colors.blue}
 
 click-right = pavucontrol
 
+[module/weather_ipc]
+type = custom/ipc
+
+hook-0 = ~/.config/polybar/scripts/weather.sh
+hook-1 = echo ''
+initial = 2
+
+click-left = polybar-msg action weather_ipc hook 0
+
+[module/weather]
+type = custom/script
+
+exec = polybar-msg action weather_ipc hook 0
+interval = 1800
+
+label = 
+
 [module/updates_ipc]
 type = custom/ipc
 
@@ -260,7 +278,8 @@ hook-0 = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 hook-1 = echo ''
 initial = 2
 
-click-left = polybar-msg action updates_ipc hook 0
+click-left = kitty --class floating zsh -c "paru -Syu; zsh"
+click-right = polybar-msg action updates_ipc hook 0
 
 [module/updates]
 type = custom/script

@@ -36,5 +36,6 @@ bspc rule -a Peek state=floating
 bspc rule -a scratchpad sticky=on state=floating
 bspc rule -a '*:Print' state=float
 bspc rule -a '*:scratchpad' sticky=on state=floating
+bspc rule -a '*:floating' state=floating
 bspc rule -a flameshot state=floating
 bspc rule -a 'JetBrains Toolbox' sticky=on #TODO

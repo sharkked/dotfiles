@@ -9,7 +9,7 @@
 window {
   location:   center;
   width:      480;
-  background-color:   @c-bg0;
+  background-color:   #141414cc;
   border: 1px;
   border-radius: 8px;
   border-color:       @c-accent;
