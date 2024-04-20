@@ -2,20 +2,19 @@
 
 pgrep -x sxhkd >/dev/null || sxhkd &
 
-bspc monitor HDMI-0 -d 1 2 3 4 5 6
-#bspc monitor DP-0 -d 0
+bspc monitor DP-0 -d 1 2 3 4 5 6
 
 BSPWM="$HOME/.config/bspwm"
 
 $BSPWM/rules.sh
 $BSPWM/theme.sh
-$BSPWM/colors/twilight
+$BSPWM/colors/kanagawa
 
 # Launch
-#$BSPWM/scripts/configure-monitors.sh
-$BSPWM/scripts/reset-polybar.sh
-$BSPWM/scripts/wallpaper.sh
-$BSPWM/scripts/picom-ignore-monocle.sh
+$BSPWM/scripts/set-wallpaper.sh
 
 # Fix java windows
 wmname LG3D
+
+# Autostart applications
+autostart &

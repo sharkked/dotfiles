@@ -11,4 +11,4 @@ bspc config right_padding 8
 bspc config top_padding 8
 bspc config bottom_padding 8
 
-bspc config -m HDMI-0 top_padding 50
+bspc config -m DP-0 top_padding 50

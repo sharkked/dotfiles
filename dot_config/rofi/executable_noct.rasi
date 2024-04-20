@@ -1,4 +1,4 @@
-@import "colors/twilight.rasi"
+@import "colors/kanagawa.rasi"
 
 * {
   text-color: @c-fg0;
@@ -9,7 +9,7 @@
 window {
   location:   center;
   width:      480;
-  background-color:   #141414cc;
+  background-color:   @c-window;
   border: 1px;
   border-radius: 8px;
   border-color:       @c-accent;

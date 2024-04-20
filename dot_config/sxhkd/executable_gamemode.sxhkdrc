@@ -11,7 +11,7 @@ super + period
   rofimoji
 
 super + shift + g
-	pkill sxhkd; sxhkd
+	pkill sxhkd; sxhkd; dunstify "Gamemode disabled!"
 
 # volume control
 XF86AudioRaiseVolume
@@ -39,7 +39,7 @@ XF86MonBrightnessDown
 Print
 	flameshot gui
 shift + Print
-	flameshot full
+	flameshot full -c
 
 #
 # state/flags

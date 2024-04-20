@@ -9,6 +9,8 @@ super + Return
 # program launcher
 super + space
 	rofi -terminal kitty -show drun
+XF86Tools
+	rofi -terminal kitty -show drun
 
 # emoji search
 super + period
@@ -44,10 +46,10 @@ XF86MonBrightnessDown
 Print
 	flameshot gui
 shift + Print
-	flameshot full
+	flameshot full -c
 
 # scratchpad
-super + u
+super +  u
     $HOME/.config/sxhkd/scripts/scratchpad.sh scratchpad
 
 # Discord reacts
@@ -59,7 +61,7 @@ super + shift + s
 
 # Toggle game mode
 super + shift + g
-    pkill sxhkd; sxhkd -c $HOME/.config/sxhkd/gamemode.sxhkdrc
+    pkill sxhkd; sxhkd -c $HOME/.config/sxhkd/gamemode.sxhkdrc; dunstify "Gamemode enabled!"
 
 #
 # bspwm hotkeys

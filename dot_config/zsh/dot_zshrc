@@ -56,9 +56,5 @@ fi
 alias yolo="lmao"
 alias lmao='git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'
 alias open="xdg-open"
-alias data="ssh -t chalmers@data"
-
 alias ydlx="yarn dlx"
-
-alias xivkill="wineserver -k;pkill 'start.exe|ffxiv_dx11.exe|Dalamud|XIVLauncher'"
-
+alias plain="sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'"
